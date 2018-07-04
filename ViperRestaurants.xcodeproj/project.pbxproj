@@ -128,8 +128,8 @@
 				F71DAEC320EA2B1200DEE489 /* Main.storyboard */,
 				F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */,
 				F7470FAE20EA6CF1008E21F8 /* Router.swift */,
-				F71DAEDF20EA389000DEE489 /* LoginModule */,
-				F7AFA4F020EBAEA3006209CC /* TableViewModule */,
+				F7CAD3AB20ED0E0800E49827 /* LoginModule */,
+				F7CAD3AA20ED0D6500E49827 /* TableViewModule */,
 				F7AFA50420EBB462006209CC /* Networking */,
 				F7470FB220EB54C8008E21F8 /* Mocks */,
 				F71DAEC820EA2B1200DEE489 /* LaunchScreen.storyboard */,
@@ -149,46 +149,6 @@
 			path = ViperRestaurantsTests;
 			sourceTree = "<group>";
 		};
-		F71DAEDF20EA389000DEE489 /* LoginModule */ = {
-			isa = PBXGroup;
-			children = (
-				F71DAEE820EA445500DEE489 /* LoginCredentials.swift */,
-				F71DAEEC20EA49B900DEE489 /* View */,
-				F71DAEED20EA49C900DEE489 /* Presenter */,
-				F71DAEEE20EA49D100DEE489 /* Interactor */,
-				F7AFA50920EBC065006209CC /* LoginNetworking */,
-			);
-			name = LoginModule;
-			sourceTree = "<group>";
-		};
-		F71DAEEC20EA49B900DEE489 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F71DAEE020EA393900DEE489 /* LoginViewProtocol.swift */,
-				F71DAEC120EA2B1200DEE489 /* LoginViewController.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		F71DAEED20EA49C900DEE489 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F71DAEE420EA43D100DEE489 /* LoginPresenterProtocol.swift */,
-				F71DAEEA20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift */,
-				F71DAEEF20EA4A0500DEE489 /* LoginPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		F71DAEEE20EA49D100DEE489 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				F71DAEE620EA440D00DEE489 /* LoginInteractorInputProtocol.swift */,
-				F71DAEF120EA4EE500DEE489 /* LoginInteractor.swift */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
 		F7470FB220EB54C8008E21F8 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,47 +156,6 @@
 				F7AFA50520EBB4D7006209CC /* MockRestaurantListNetworking.swift */,
 			);
 			name = Mocks;
-			sourceTree = "<group>";
-		};
-		F7AFA4F020EBAEA3006209CC /* TableViewModule */ = {
-			isa = PBXGroup;
-			children = (
-				F7AFA4FE20EBB112006209CC /* RestaurantModel.swift */,
-				F7AFA4F320EBAF00006209CC /* View */,
-				F7AFA4F820EBB0AD006209CC /* Presenter */,
-				F7AFA4FD20EBB0EA006209CC /* Interactor */,
-				F7AFA50A20EBC07C006209CC /* TableViewNetworking */,
-			);
-			name = TableViewModule;
-			sourceTree = "<group>";
-		};
-		F7AFA4F320EBAF00006209CC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F7AFA4F420EBAF13006209CC /* TableViewControllerProtocol.swift */,
-				F7AFA4F120EBAECD006209CC /* TableViewController.swift */,
-				F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		F7AFA4F820EBB0AD006209CC /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F7AFA4F620EBB068006209CC /* TableViewPresenterProtocol.swift */,
-				F7AFA50020EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift */,
-				F7AFA4F920EBB0C2006209CC /* TableViewPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		F7AFA4FD20EBB0EA006209CC /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				F7AFA4FB20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift */,
-				F7AFA50220EBB3B2006209CC /* TableViewInteractor.swift */,
-			);
-			name = Interactor;
 			sourceTree = "<group>";
 		};
 		F7AFA50420EBB462006209CC /* Networking */ = {
@@ -248,20 +167,101 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		F7AFA50920EBC065006209CC /* LoginNetworking */ = {
+		F7CAD3AA20ED0D6500E49827 /* TableViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4FE20EBB112006209CC /* RestaurantModel.swift */,
+				F7CAD3B120ED0F3000E49827 /* View */,
+				F7CAD3B220ED0F4000E49827 /* Presenter */,
+				F7CAD3B320ED0F5D00E49827 /* Interactor */,
+				F7CAD3B420ED0F7000E49827 /* TableViewNetworking */,
+			);
+			path = TableViewModule;
+			sourceTree = "<group>";
+		};
+		F7CAD3AB20ED0E0800E49827 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE820EA445500DEE489 /* LoginCredentials.swift */,
+				F7CAD3AC20ED0E8000E49827 /* View */,
+				F7CAD3AD20ED0E9500E49827 /* Presenter */,
+				F7CAD3AF20ED0EBA00E49827 /* Interactor */,
+				F7CAD3B020ED0ECA00E49827 /* LoginNetworking */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		F7CAD3AC20ED0E8000E49827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE020EA393900DEE489 /* LoginViewProtocol.swift */,
+				F71DAEC120EA2B1200DEE489 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7CAD3AD20ED0E9500E49827 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE420EA43D100DEE489 /* LoginPresenterProtocol.swift */,
+				F71DAEEA20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift */,
+				F71DAEEF20EA4A0500DEE489 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F7CAD3AF20ED0EBA00E49827 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE620EA440D00DEE489 /* LoginInteractorInputProtocol.swift */,
+				F71DAEF120EA4EE500DEE489 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F7CAD3B020ED0ECA00E49827 /* LoginNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				F71DAEF320EA5F6E00DEE489 /* LoginNetworkingProtocol.swift */,
 			);
-			name = LoginNetworking;
+			path = LoginNetworking;
 			sourceTree = "<group>";
 		};
-		F7AFA50A20EBC07C006209CC /* TableViewNetworking */ = {
+		F7CAD3B120ED0F3000E49827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4F420EBAF13006209CC /* TableViewControllerProtocol.swift */,
+				F7AFA4F120EBAECD006209CC /* TableViewController.swift */,
+				F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7CAD3B220ED0F4000E49827 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4F620EBB068006209CC /* TableViewPresenterProtocol.swift */,
+				F7AFA50020EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift */,
+				F7AFA4F920EBB0C2006209CC /* TableViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F7CAD3B320ED0F5D00E49827 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4FB20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift */,
+				F7AFA50220EBB3B2006209CC /* TableViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F7CAD3B420ED0F7000E49827 /* TableViewNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */,
 			);
-			name = TableViewNetworking;
+			path = TableViewNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
