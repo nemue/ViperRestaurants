@@ -22,7 +22,6 @@ class MockRestaurantListNetworking: TableNetworkingProtocol {
 // MARK: - Helpers
 
 extension MockRestaurantListNetworking {
-    
     func generateRestaurants() -> [RestaurantModel] {
         var list = [RestaurantModel]()
 

@@ -16,8 +16,8 @@ class LoginViewController: UIViewController{
     
     // MARK: - Outlets
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     // MARK: - ViewController Life Cycle
     

@@ -18,7 +18,6 @@ class TableViewInteractor: TableViewInteractorInputProtocol {
     // MARK: - Load Restaurants
     
     func loadRestaurants() {
-        
         guard let networkingResult = self.networkSession?.request() else {
             presenter?.restaurantsNotLoaded(error: NetworkingError.ConnectionError)
             return

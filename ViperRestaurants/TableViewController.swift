@@ -14,11 +14,11 @@ class TableViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: TableViewPresenterProtocol?
-    var restaurantList: [RestaurantModel]?
+    private var restaurantList: [RestaurantModel]?
     
     //MARK: - Outlets
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - ViewController Lifecycle
     
@@ -46,7 +46,7 @@ extension TableViewController: TableViewControllerProtocol {
 // MARK: - TableView Delegate
 
 extension TableViewController: UITableViewDelegate {
-    
+    // TODO
 }
 
 // MARK: - TableView DataSource

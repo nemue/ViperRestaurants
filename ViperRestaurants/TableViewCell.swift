@@ -13,8 +13,8 @@ class TableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
     
     // MARK: - Configuration
     

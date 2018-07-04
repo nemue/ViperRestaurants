@@ -9,13 +9,20 @@
 import Foundation
 
 class LoginPresenter: LoginPresenterProtocol {
+    
+    // MARK: - Properties
+    
     var interactor: LoginInteractorInputProtocol?
     var view: LoginViewProtocol?
+    
+    // MARK: Login Presenter Protocol
     
     func updateView(data: LoginCredentials) {
         self.interactor?.authenticateLoginData(data: data)
     }
 }
+
+// MARK: - Login Interactor Input Protocol
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
     func loginFailure(error: NetworkingError) {

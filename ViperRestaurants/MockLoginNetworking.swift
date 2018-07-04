@@ -9,7 +9,6 @@
 import Foundation
 
 class MockLoginNetworking: LoginNetworkingProtocol {
-    
     func request(data: LoginCredentials) -> NetworkingResult<String> {
         if(data.name == "Nele" && data.password == "pw") {
             let result = NetworkingResult.success("1")
