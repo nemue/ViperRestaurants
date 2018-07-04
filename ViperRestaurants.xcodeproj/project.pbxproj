@@ -130,8 +130,8 @@
 				F7470FAE20EA6CF1008E21F8 /* Router.swift */,
 				F7CAD3AB20ED0E0800E49827 /* LoginModule */,
 				F7CAD3AA20ED0D6500E49827 /* TableViewModule */,
-				F7CAD3B620ED13A200E49827 /* Networking */,
-				F7CAD3B720ED13BA00E49827 /* Mocks */,
+				F7CAD3B920ED143800E49827 /* Networking */,
+				F7CAD3B820ED141A00E49827 /* Mocks */,
 				F71DAEC820EA2B1200DEE489 /* LaunchScreen.storyboard */,
 				F71DAEC620EA2B1200DEE489 /* Assets.xcassets */,
 				F71DAECB20EA2B1200DEE489 /* Info.plist */,
@@ -246,22 +246,22 @@
 			path = TableViewNetworking;
 			sourceTree = "<group>";
 		};
-		F7CAD3B620ED13A200E49827 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				F71DAEF520EA5FF000DEE489 /* NetworkingResult.swift */,
-				F71DAEE220EA433800DEE489 /* NetworkingError.swift */,
-			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
-		F7CAD3B720ED13BA00E49827 /* Mocks */ = {
+		F7CAD3B820ED141A00E49827 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				F7470FB020EB54AF008E21F8 /* MockLoginNetworking.swift */,
 				F7AFA50520EBB4D7006209CC /* MockRestaurantListNetworking.swift */,
 			);
-			name = Mocks;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F7CAD3B920ED143800E49827 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEF520EA5FF000DEE489 /* NetworkingResult.swift */,
+				F71DAEE220EA433800DEE489 /* NetworkingError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
