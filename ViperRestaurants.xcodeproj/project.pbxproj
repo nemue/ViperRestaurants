@@ -8,11 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		F71DAEC020EA2B1200DEE489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */; };
-		F71DAEC220EA2B1200DEE489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEC120EA2B1200DEE489 /* ViewController.swift */; };
+		F71DAEC220EA2B1200DEE489 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEC120EA2B1200DEE489 /* LoginViewController.swift */; };
 		F71DAEC520EA2B1200DEE489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71DAEC320EA2B1200DEE489 /* Main.storyboard */; };
 		F71DAEC720EA2B1200DEE489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71DAEC620EA2B1200DEE489 /* Assets.xcassets */; };
 		F71DAECA20EA2B1200DEE489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71DAEC820EA2B1200DEE489 /* LaunchScreen.storyboard */; };
 		F71DAED520EA2B1200DEE489 /* ViperRestaurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAED420EA2B1200DEE489 /* ViperRestaurantsTests.swift */; };
+		F71DAEE120EA393900DEE489 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEE020EA393900DEE489 /* LoginViewProtocol.swift */; };
+		F71DAEE320EA433800DEE489 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEE220EA433800DEE489 /* NetworkingError.swift */; };
+		F71DAEE520EA43D100DEE489 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEE420EA43D100DEE489 /* LoginPresenterProtocol.swift */; };
+		F71DAEE720EA440D00DEE489 /* LoginInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEE620EA440D00DEE489 /* LoginInteractorInputProtocol.swift */; };
+		F71DAEE920EA445500DEE489 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEE820EA445500DEE489 /* LoginCredentials.swift */; };
+		F71DAEEB20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEEA20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift */; };
+		F71DAEF020EA4A0500DEE489 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEEF20EA4A0500DEE489 /* LoginPresenter.swift */; };
+		F71DAEF220EA4EE500DEE489 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEF120EA4EE500DEE489 /* LoginInteractor.swift */; };
+		F71DAEF420EA5F6E00DEE489 /* LoginNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEF320EA5F6E00DEE489 /* LoginNetworkingProtocol.swift */; };
+		F71DAEF620EA5FF000DEE489 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAEF520EA5FF000DEE489 /* NetworkingResult.swift */; };
+		F7470FAF20EA6CF1008E21F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7470FAE20EA6CF1008E21F8 /* Router.swift */; };
+		F7470FB120EB54AF008E21F8 /* MockLoginNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7470FB020EB54AF008E21F8 /* MockLoginNetworking.swift */; };
+		F7AFA4F220EBAECD006209CC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4F120EBAECD006209CC /* TableViewController.swift */; };
+		F7AFA4F520EBAF13006209CC /* TableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4F420EBAF13006209CC /* TableViewControllerProtocol.swift */; };
+		F7AFA4F720EBB068006209CC /* TableViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4F620EBB068006209CC /* TableViewPresenterProtocol.swift */; };
+		F7AFA4FA20EBB0C2006209CC /* TableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4F920EBB0C2006209CC /* TableViewPresenter.swift */; };
+		F7AFA4FC20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4FB20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift */; };
+		F7AFA4FF20EBB112006209CC /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA4FE20EBB112006209CC /* RestaurantModel.swift */; };
+		F7AFA50120EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50020EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift */; };
+		F7AFA50320EBB3B2006209CC /* TableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50220EBB3B2006209CC /* TableViewInteractor.swift */; };
+		F7AFA50620EBB4D7006209CC /* MockRestaurantListNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50520EBB4D7006209CC /* MockRestaurantListNetworking.swift */; };
+		F7AFA50820EBBFFD006209CC /* TableNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */; };
+		F7AFA50C20ECBEA9006209CC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */; };
+		F7CAD3A920ECFEFA00E49827 /* ControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +52,7 @@
 /* Begin PBXFileReference section */
 		F71DAEBC20EA2B1200DEE489 /* ViperRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F71DAEC120EA2B1200DEE489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F71DAEC120EA2B1200DEE489 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F71DAEC420EA2B1200DEE489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F71DAEC620EA2B1200DEE489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F71DAEC920EA2B1200DEE489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +60,30 @@
 		F71DAED020EA2B1200DEE489 /* ViperRestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperRestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71DAED420EA2B1200DEE489 /* ViperRestaurantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperRestaurantsTests.swift; sourceTree = "<group>"; };
 		F71DAED620EA2B1200DEE489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71DAEE020EA393900DEE489 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		F71DAEE220EA433800DEE489 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		F71DAEE420EA43D100DEE489 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		F71DAEE620EA440D00DEE489 /* LoginInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		F71DAEE820EA445500DEE489 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		F71DAEEA20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		F71DAEEF20EA4A0500DEE489 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F71DAEF120EA4EE500DEE489 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		F71DAEF320EA5F6E00DEE489 /* LoginNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkingProtocol.swift; sourceTree = "<group>"; };
+		F71DAEF520EA5FF000DEE489 /* NetworkingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
+		F7470FAE20EA6CF1008E21F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F7470FB020EB54AF008E21F8 /* MockLoginNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginNetworking.swift; sourceTree = "<group>"; };
+		F7AFA4F120EBAECD006209CC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F7AFA4F420EBAF13006209CC /* TableViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F7AFA4F620EBB068006209CC /* TableViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		F7AFA4F920EBB0C2006209CC /* TableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPresenter.swift; sourceTree = "<group>"; };
+		F7AFA4FB20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		F7AFA4FE20EBB112006209CC /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		F7AFA50020EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		F7AFA50220EBB3B2006209CC /* TableViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewInteractor.swift; sourceTree = "<group>"; };
+		F7AFA50520EBB4D7006209CC /* MockRestaurantListNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantListNetworking.swift; sourceTree = "<group>"; };
+		F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNetworkingProtocol.swift; sourceTree = "<group>"; };
+		F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +125,17 @@
 		F71DAEBE20EA2B1200DEE489 /* ViperRestaurants */ = {
 			isa = PBXGroup;
 			children = (
-				F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */,
-				F71DAEC120EA2B1200DEE489 /* ViewController.swift */,
 				F71DAEC320EA2B1200DEE489 /* Main.storyboard */,
-				F71DAEC620EA2B1200DEE489 /* Assets.xcassets */,
+				F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */,
+				F7470FAE20EA6CF1008E21F8 /* Router.swift */,
+				F71DAEDF20EA389000DEE489 /* LoginModule */,
+				F7AFA4F020EBAEA3006209CC /* TableViewModule */,
+				F7AFA50420EBB462006209CC /* Networking */,
+				F7470FB220EB54C8008E21F8 /* Mocks */,
 				F71DAEC820EA2B1200DEE489 /* LaunchScreen.storyboard */,
+				F71DAEC620EA2B1200DEE489 /* Assets.xcassets */,
 				F71DAECB20EA2B1200DEE489 /* Info.plist */,
+				F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */,
 			);
 			path = ViperRestaurants;
 			sourceTree = "<group>";
@@ -94,6 +147,121 @@
 				F71DAED620EA2B1200DEE489 /* Info.plist */,
 			);
 			path = ViperRestaurantsTests;
+			sourceTree = "<group>";
+		};
+		F71DAEDF20EA389000DEE489 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE820EA445500DEE489 /* LoginCredentials.swift */,
+				F71DAEEC20EA49B900DEE489 /* View */,
+				F71DAEED20EA49C900DEE489 /* Presenter */,
+				F71DAEEE20EA49D100DEE489 /* Interactor */,
+				F7AFA50920EBC065006209CC /* LoginNetworking */,
+			);
+			name = LoginModule;
+			sourceTree = "<group>";
+		};
+		F71DAEEC20EA49B900DEE489 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE020EA393900DEE489 /* LoginViewProtocol.swift */,
+				F71DAEC120EA2B1200DEE489 /* LoginViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F71DAEED20EA49C900DEE489 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE420EA43D100DEE489 /* LoginPresenterProtocol.swift */,
+				F71DAEEA20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift */,
+				F71DAEEF20EA4A0500DEE489 /* LoginPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		F71DAEEE20EA49D100DEE489 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEE620EA440D00DEE489 /* LoginInteractorInputProtocol.swift */,
+				F71DAEF120EA4EE500DEE489 /* LoginInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		F7470FB220EB54C8008E21F8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F7470FB020EB54AF008E21F8 /* MockLoginNetworking.swift */,
+				F7AFA50520EBB4D7006209CC /* MockRestaurantListNetworking.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		F7AFA4F020EBAEA3006209CC /* TableViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4FE20EBB112006209CC /* RestaurantModel.swift */,
+				F7AFA4F320EBAF00006209CC /* View */,
+				F7AFA4F820EBB0AD006209CC /* Presenter */,
+				F7AFA4FD20EBB0EA006209CC /* Interactor */,
+				F7AFA50A20EBC07C006209CC /* TableViewNetworking */,
+			);
+			name = TableViewModule;
+			sourceTree = "<group>";
+		};
+		F7AFA4F320EBAF00006209CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4F420EBAF13006209CC /* TableViewControllerProtocol.swift */,
+				F7AFA4F120EBAECD006209CC /* TableViewController.swift */,
+				F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F7AFA4F820EBB0AD006209CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4F620EBB068006209CC /* TableViewPresenterProtocol.swift */,
+				F7AFA50020EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift */,
+				F7AFA4F920EBB0C2006209CC /* TableViewPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		F7AFA4FD20EBB0EA006209CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA4FB20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift */,
+				F7AFA50220EBB3B2006209CC /* TableViewInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		F7AFA50420EBB462006209CC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEF520EA5FF000DEE489 /* NetworkingResult.swift */,
+				F71DAEE220EA433800DEE489 /* NetworkingError.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		F7AFA50920EBC065006209CC /* LoginNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAEF320EA5F6E00DEE489 /* LoginNetworkingProtocol.swift */,
+			);
+			name = LoginNetworking;
+			sourceTree = "<group>";
+		};
+		F7AFA50A20EBC07C006209CC /* TableViewNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */,
+			);
+			name = TableViewNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +367,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71DAEC220EA2B1200DEE489 /* ViewController.swift in Sources */,
+				F7AFA50120EBB1F7006209CC /* TableViewInteractorOutputProtocol.swift in Sources */,
+				F7AFA4FC20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift in Sources */,
+				F7AFA4FA20EBB0C2006209CC /* TableViewPresenter.swift in Sources */,
+				F7AFA4F520EBAF13006209CC /* TableViewControllerProtocol.swift in Sources */,
+				F71DAEE520EA43D100DEE489 /* LoginPresenterProtocol.swift in Sources */,
+				F71DAEC220EA2B1200DEE489 /* LoginViewController.swift in Sources */,
+				F7AFA50320EBB3B2006209CC /* TableViewInteractor.swift in Sources */,
+				F71DAEE120EA393900DEE489 /* LoginViewProtocol.swift in Sources */,
+				F71DAEF020EA4A0500DEE489 /* LoginPresenter.swift in Sources */,
+				F71DAEE920EA445500DEE489 /* LoginCredentials.swift in Sources */,
+				F7470FB120EB54AF008E21F8 /* MockLoginNetworking.swift in Sources */,
+				F71DAEE720EA440D00DEE489 /* LoginInteractorInputProtocol.swift in Sources */,
+				F71DAEF620EA5FF000DEE489 /* NetworkingResult.swift in Sources */,
+				F7AFA4F220EBAECD006209CC /* TableViewController.swift in Sources */,
+				F71DAEEB20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift in Sources */,
+				F71DAEE320EA433800DEE489 /* NetworkingError.swift in Sources */,
+				F7AFA4FF20EBB112006209CC /* RestaurantModel.swift in Sources */,
+				F71DAEF420EA5F6E00DEE489 /* LoginNetworkingProtocol.swift in Sources */,
+				F7AFA4F720EBB068006209CC /* TableViewPresenterProtocol.swift in Sources */,
+				F71DAEF220EA4EE500DEE489 /* LoginInteractor.swift in Sources */,
+				F7AFA50C20ECBEA9006209CC /* TableViewCell.swift in Sources */,
+				F7470FAF20EA6CF1008E21F8 /* Router.swift in Sources */,
+				F7CAD3A920ECFEFA00E49827 /* ControllerEnum.swift in Sources */,
+				F7AFA50820EBBFFD006209CC /* TableNetworkingProtocol.swift in Sources */,
+				F7AFA50620EBB4D7006209CC /* MockRestaurantListNetworking.swift in Sources */,
 				F71DAEC020EA2B1200DEE489 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,10 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let loginViewController = Router.createLoginModule()
+        self.window?.rootViewController = loginViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func switchControllers(to viewController: UIViewController) {
+        self.window?.rootViewController = viewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
