@@ -15,29 +15,42 @@ class Router {
     
     static var storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     static var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    private static var navigationController = UINavigationController()
     
     // MARK: - Switching Modules
     
     static func switchModule(view: ControllerEnum) {
+        var handler: (UIWindow?) -> ()
+        
         guard let delegate = appDelegate else {
             return
         }
-        var viewController: UIViewController
         
         switch view {
         case .LoginController:
-            viewController = self.createLoginModule()
-            delegate.switchControllers(to: viewController)
+            handler = { window in
+                window?.rootViewController = self.createLoginModule()
+            }
         case .TableViewController:
-            viewController = self.createTableViewModule()
-            delegate.switchControllers(to: viewController)
+            let viewController = self.createTableViewModule()
+            self.navigationController = createNavigationController()
+            self.navigationController.addChildViewController(viewController)
+            handler = { window in
+                window?.rootViewController = self.navigationController
+            }
+
         case .DetailViewController:
-            viewController = self.createDetailViewModule()
-            delegate.switchControllers(to: viewController)
+            let viewController = self.createDetailViewModule()
+            self.navigationController.addChildViewController(viewController)
+            handler = { window in
+                window?.rootViewController = self.navigationController
+            }
         }
+        
+        delegate.switchViewControllers (handler: handler)
     }
     
-    //MARK: - Creating Modules
+    // MARK: - Creating Modules
     
     static func createLoginModule() -> UIViewController {
         
@@ -81,6 +94,22 @@ class Router {
     static func createDetailViewModule() -> UIViewController {
         // TODO
         return UIViewController()
+    }
+}
+
+
+// MARK: - Helpers
+
+extension Router {
+    static func createNavigationController() -> UINavigationController {
+//        if navigationController.storyboard.id
+        guard let navigationController = storyboard.instantiateViewController(withIdentifier: "TableViewNavigationController") as? UINavigationController else {
+            print("Router: NavigationController could not be instantiated.")
+            return UINavigationController()
+        }
+        self.navigationController = navigationController
+        
+        return navigationController
     }
 }
 

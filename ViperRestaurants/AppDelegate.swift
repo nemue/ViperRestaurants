@@ -21,9 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func switchControllers(to viewController: UIViewController) {
-        self.window?.rootViewController = viewController
+    func switchViewControllers(handler: (UIWindow?) -> ()) {
+        handler(window)
     }
+//    func switchControllers(to viewController: UIViewController) {
+//        self.window?.rootViewController = viewController
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
