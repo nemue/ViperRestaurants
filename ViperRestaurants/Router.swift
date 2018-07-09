@@ -15,7 +15,15 @@ class Router {
     
     static var storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     static var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    private static var startViewController = UIViewController()
     private static var navigationController = UINavigationController()
+
+    static func configureAndCreateFirstModule() -> UIViewController {
+        self.startViewController = self.createLoginModule()
+        self.navigationController = self.createNavigationController()
+
+        return self.startViewController
+    }
     
     // MARK: - Switching Modules
     
@@ -23,36 +31,47 @@ class Router {
         var handler: (UIWindow?) -> ()
         
         guard let delegate = appDelegate else {
+            print("Router: appDelegate not unwrapped.")
             return
         }
         
         switch view {
         case .LoginController:
             handler = { window in
-                window?.rootViewController = self.createLoginModule()
+                window?.rootViewController = self.startViewController
             }
         case .TableViewController:
             let viewController = self.createTableViewModule()
-            self.navigationController = createNavigationController()
             self.navigationController.addChildViewController(viewController)
+
+            viewController.didMove(toParentViewController: self.navigationController)
             handler = { window in
                 window?.rootViewController = self.navigationController
             }
+            delegate.switchViewControllers (handler: handler)
 
-        case .DetailViewController:
-            let viewController = self.createDetailViewModule()
-            self.navigationController.addChildViewController(viewController)
+
+        case .DetailViewController(let position):
+            let viewController = self.createDetailViewModule(position: position)
+//            self.navigationController.addChildViewController(viewController)
+            self.navigationController.pushViewController(viewController, animated: true)
+//            viewController.didMove(toParentViewController: self.navigationController)
+
+
             handler = { window in
-                window?.rootViewController = self.navigationController
+                window?.rootViewController?.view.addSubview(viewController.view)
             }
         }
         
-        delegate.switchViewControllers (handler: handler)
+//        delegate.switchViewControllers (handler: handler)
     }
+}
+
+// MARK: - Creating Modules
+
+extension Router {
     
-    // MARK: - Creating Modules
-    
-    static func createLoginModule() -> UIViewController {
+    private static func createLoginModule() -> UIViewController {
         
         guard let view = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
             print("Router: LoginViewController could not be instantiated.")
@@ -72,7 +91,7 @@ class Router {
         return view
     }
     
-    static func createTableViewModule() -> UIViewController {
+    private static func createTableViewModule() -> UIViewController {
         guard let view = storyboard.instantiateViewController(withIdentifier: "TableViewController") as? TableViewController else {
             print("Router: TableViewController could not be instantiated.")
             return UIViewController()
@@ -91,9 +110,24 @@ class Router {
         return view
     }
     
-    static func createDetailViewModule() -> UIViewController {
-        // TODO
-        return UIViewController()
+    private static func createDetailViewModule(position: Int) -> UIViewController {
+        guard let view = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            print("Router: DetailViewController could not be instantiated.")
+            return UIViewController()
+        }
+        
+        let presenter = DetailPresenter()
+        let interactor = DetailInteractor()
+        let networkSession = MockRestaurantListNetworking()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.restaurantIndex = position
+        interactor.presenter = presenter
+        interactor.networkSession = networkSession
+        
+        return view
     }
 }
 
@@ -101,13 +135,11 @@ class Router {
 // MARK: - Helpers
 
 extension Router {
-    static func createNavigationController() -> UINavigationController {
-//        if navigationController.storyboard.id
+    private static func createNavigationController() -> UINavigationController {
         guard let navigationController = storyboard.instantiateViewController(withIdentifier: "TableViewNavigationController") as? UINavigationController else {
             print("Router: NavigationController could not be instantiated.")
             return UINavigationController()
         }
-        self.navigationController = navigationController
         
         return navigationController
     }

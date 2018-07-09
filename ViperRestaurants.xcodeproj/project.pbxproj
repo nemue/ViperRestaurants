@@ -37,6 +37,13 @@
 		F7AFA50820EBBFFD006209CC /* TableNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */; };
 		F7AFA50C20ECBEA9006209CC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */; };
 		F7CAD3A920ECFEFA00E49827 /* ControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */; };
+		F7CAD3C020EE5F1E00E49827 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3BF20EE5F1E00E49827 /* DetailViewController.swift */; };
+		F7CAD3C220EE5F3700E49827 /* DetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3C120EE5F3700E49827 /* DetailViewProtocol.swift */; };
+		F7CAD3C420EE5FC100E49827 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3C320EE5FC100E49827 /* DetailPresenter.swift */; };
+		F7CAD3C620EE5FCF00E49827 /* DetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3C520EE5FCF00E49827 /* DetailPresenterProtocol.swift */; };
+		F7CAD3C820EE602200E49827 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3C720EE602200E49827 /* DetailInteractor.swift */; };
+		F7CAD3CA20EE603B00E49827 /* DetailInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3C920EE603B00E49827 /* DetailInteractorInputProtocol.swift */; };
+		F7CAD3CE20EE63DE00E49827 /* DetailInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD3CD20EE63DE00E49827 /* DetailInteractorOutputProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +91,13 @@
 		F7AFA50720EBBFFD006209CC /* TableNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNetworkingProtocol.swift; sourceTree = "<group>"; };
 		F7AFA50B20ECBEA9006209CC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerEnum.swift; sourceTree = "<group>"; };
+		F7CAD3BF20EE5F1E00E49827 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F7CAD3C120EE5F3700E49827 /* DetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewProtocol.swift; sourceTree = "<group>"; };
+		F7CAD3C320EE5FC100E49827 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		F7CAD3C520EE5FCF00E49827 /* DetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		F7CAD3C720EE602200E49827 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		F7CAD3C920EE603B00E49827 /* DetailInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		F7CAD3CD20EE63DE00E49827 /* DetailInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorOutputProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +142,15 @@
 				F71DAEC320EA2B1200DEE489 /* Main.storyboard */,
 				F71DAEBF20EA2B1200DEE489 /* AppDelegate.swift */,
 				F7470FAE20EA6CF1008E21F8 /* Router.swift */,
+				F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */,
 				F7CAD3AB20ED0E0800E49827 /* LoginModule */,
 				F7CAD3AA20ED0D6500E49827 /* TableViewModule */,
+				F7CAD3BA20EE5E9300E49827 /* DetailViewModule */,
 				F7CAD3B920ED143800E49827 /* Networking */,
 				F7CAD3B820ED141A00E49827 /* Mocks */,
 				F71DAEC820EA2B1200DEE489 /* LaunchScreen.storyboard */,
 				F71DAEC620EA2B1200DEE489 /* Assets.xcassets */,
 				F71DAECB20EA2B1200DEE489 /* Info.plist */,
-				F7CAD3A820ECFEFA00E49827 /* ControllerEnum.swift */,
 			);
 			path = ViperRestaurants;
 			sourceTree = "<group>";
@@ -264,6 +279,44 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		F7CAD3BA20EE5E9300E49827 /* DetailViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAD3BB20EE5EB600E49827 /* View */,
+				F7CAD3BC20EE5EC500E49827 /* Presenter */,
+				F7CAD3BD20EE5ECC00E49827 /* Interactor */,
+			);
+			path = DetailViewModule;
+			sourceTree = "<group>";
+		};
+		F7CAD3BB20EE5EB600E49827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAD3C120EE5F3700E49827 /* DetailViewProtocol.swift */,
+				F7CAD3BF20EE5F1E00E49827 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7CAD3BC20EE5EC500E49827 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAD3C520EE5FCF00E49827 /* DetailPresenterProtocol.swift */,
+				F7CAD3CD20EE63DE00E49827 /* DetailInteractorOutputProtocol.swift */,
+				F7CAD3C320EE5FC100E49827 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F7CAD3BD20EE5ECC00E49827 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAD3C920EE603B00E49827 /* DetailInteractorInputProtocol.swift */,
+				F7CAD3C720EE602200E49827 /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,25 +424,32 @@
 				F7AFA4FC20EBB0E6006209CC /* TableViewInteractorInputProtocol.swift in Sources */,
 				F7AFA4FA20EBB0C2006209CC /* TableViewPresenter.swift in Sources */,
 				F7AFA4F520EBAF13006209CC /* TableViewControllerProtocol.swift in Sources */,
+				F7CAD3C820EE602200E49827 /* DetailInteractor.swift in Sources */,
 				F71DAEE520EA43D100DEE489 /* LoginPresenterProtocol.swift in Sources */,
 				F71DAEC220EA2B1200DEE489 /* LoginViewController.swift in Sources */,
 				F7AFA50320EBB3B2006209CC /* TableViewInteractor.swift in Sources */,
 				F71DAEE120EA393900DEE489 /* LoginViewProtocol.swift in Sources */,
 				F71DAEF020EA4A0500DEE489 /* LoginPresenter.swift in Sources */,
+				F7CAD3C020EE5F1E00E49827 /* DetailViewController.swift in Sources */,
 				F71DAEE920EA445500DEE489 /* LoginCredentials.swift in Sources */,
 				F7470FB120EB54AF008E21F8 /* MockLoginNetworking.swift in Sources */,
 				F71DAEE720EA440D00DEE489 /* LoginInteractorInputProtocol.swift in Sources */,
 				F71DAEF620EA5FF000DEE489 /* NetworkingResult.swift in Sources */,
 				F7AFA4F220EBAECD006209CC /* TableViewController.swift in Sources */,
+				F7CAD3C220EE5F3700E49827 /* DetailViewProtocol.swift in Sources */,
 				F71DAEEB20EA44F700DEE489 /* LoginInteractorOutputProtocol.swift in Sources */,
 				F71DAEE320EA433800DEE489 /* NetworkingError.swift in Sources */,
+				F7CAD3C620EE5FCF00E49827 /* DetailPresenterProtocol.swift in Sources */,
 				F7AFA4FF20EBB112006209CC /* RestaurantModel.swift in Sources */,
 				F71DAEF420EA5F6E00DEE489 /* LoginNetworkingProtocol.swift in Sources */,
+				F7CAD3CE20EE63DE00E49827 /* DetailInteractorOutputProtocol.swift in Sources */,
 				F7AFA4F720EBB068006209CC /* TableViewPresenterProtocol.swift in Sources */,
 				F71DAEF220EA4EE500DEE489 /* LoginInteractor.swift in Sources */,
+				F7CAD3CA20EE603B00E49827 /* DetailInteractorInputProtocol.swift in Sources */,
 				F7AFA50C20ECBEA9006209CC /* TableViewCell.swift in Sources */,
 				F7470FAF20EA6CF1008E21F8 /* Router.swift in Sources */,
 				F7CAD3A920ECFEFA00E49827 /* ControllerEnum.swift in Sources */,
+				F7CAD3C420EE5FC100E49827 /* DetailPresenter.swift in Sources */,
 				F7AFA50820EBBFFD006209CC /* TableNetworkingProtocol.swift in Sources */,
 				F7AFA50620EBB4D7006209CC /* MockRestaurantListNetworking.swift in Sources */,
 				F71DAEC020EA2B1200DEE489 /* AppDelegate.swift in Sources */,

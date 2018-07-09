@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MockRestaurantListNetworking: TableNetworkingProtocol {
 
@@ -27,10 +28,11 @@ extension MockRestaurantListNetworking {
 
         for i in 1...20 {
             let name = "Restaurant " + String(describing: i)
+            let photo = UIImage(named: "defaultPhoto")
             let address = "Hauptstraße " + String(describing: i)
             let rating =  Int(arc4random()) % 5
             
-            list.append(RestaurantModel(name: name, address: address, rating: rating))
+            list.append(RestaurantModel(name: name, address: address, rating: rating, image: photo))
         }
         
         return list

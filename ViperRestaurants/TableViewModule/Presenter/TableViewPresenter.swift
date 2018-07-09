@@ -20,6 +20,12 @@ class TableViewPresenter: TableViewPresenterProtocol {
     func updateRestaurantList() {
         interactor?.loadRestaurants()
     }
+    
+    // MARK: - Restaurant selected
+    
+    func restaurantSelected(position: Int) {
+        Router.switchModule(view: .DetailViewController(position: position))
+    }
 }
 
 // MARK: - Interactor Output Protocol

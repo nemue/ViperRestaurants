@@ -12,6 +12,7 @@ enum NetworkingError: Error {
     case ConnectionError
     case AuthenticationError
     case TypecastingError
+    case Other(description: String)
     
     public var description: String {
         switch self {
@@ -21,6 +22,8 @@ enum NetworkingError: Error {
             return "Wrong username or password."
         case .TypecastingError:
             return "Typecasting failed."
+        case .Other(let description):
+            return description
         }
     }
 }

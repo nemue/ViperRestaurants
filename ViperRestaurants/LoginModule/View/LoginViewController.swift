@@ -38,6 +38,8 @@ class LoginViewController: UIViewController{
     }
 }
 
+// MARK: - Login View Protocol
+
 extension LoginViewController: LoginViewProtocol {
     func showError(errorString: String) {
         let alert = UIAlertController(title: "Error", message: errorString, preferredStyle:

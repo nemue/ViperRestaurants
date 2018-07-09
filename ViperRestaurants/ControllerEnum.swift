@@ -11,5 +11,5 @@ import Foundation
 enum ControllerEnum {
     case LoginController
     case TableViewController
-    case DetailViewController
+    case DetailViewController (position: Int)
 }

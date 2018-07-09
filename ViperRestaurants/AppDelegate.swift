@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let loginViewController = Router.createLoginModule()
-        self.window?.rootViewController = loginViewController
+        let startViewController = Router.configureAndCreateFirstModule()
+        self.window?.rootViewController = startViewController
         self.window?.makeKeyAndVisible()
         
         return true

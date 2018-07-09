@@ -7,16 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class RestaurantModel {
     var name: String
     var address: String?
     var rating: Int?
-    var image: URL?
+    var image: UIImage?
     
-    init(name: String, address: String? = "", rating: Int? = 0) {
+    init(name: String, address: String? = "", rating: Int? = 0, image: UIImage? = nil) {
         self.name = name
         self.address = address
         self.rating = rating
+        self.image = image
     }
 }

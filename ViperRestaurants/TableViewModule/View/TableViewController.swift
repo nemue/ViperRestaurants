@@ -46,7 +46,9 @@ extension TableViewController: TableViewControllerProtocol {
 // MARK: - TableView Delegate
 
 extension TableViewController: UITableViewDelegate {
-    // TODO
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.restaurantSelected(position: indexPath.row)
+    }
 }
 
 // MARK: - TableView DataSource

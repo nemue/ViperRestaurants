@@ -10,4 +10,5 @@ import Foundation
 
 protocol TableViewPresenterProtocol {
     func updateRestaurantList()
+    func restaurantSelected(position: Int)
 }
